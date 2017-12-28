@@ -1,0 +1,370 @@
+/* Fonts */
+@font-face {
+  font-family: Gotham-Light;
+  font-weight: 100;
+  src: url(./../fonts/gotham-book.ttf); }
+
+@font-face {
+  font-family: Gotham-Medium;
+  font-weight: 400;
+  src: url(./../fonts/gotham-medium.ttf); }
+
+@font-face {
+  font-family: Gotham-Bold;
+  font-weight: 700;
+  src: url(./../fonts/gotham-bold.ttf); }
+
+/* Colors */
+/* Global CSS */
+body {
+  margin: 0 auto; }
+
+.container {
+  width: 1040px;
+  margin: 0 auto;
+  padding: 100px 0; }
+
+@media (max-width: 960px) {
+  .container {
+    width: 700px; } }
+
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+    padding: 50px 0; } }
+
+/* Sections */
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #ffffff;
+  background-image: url("./../img/bg-header.png");
+  background-position: top center;
+  background-size: cover; }
+  .header .container {
+    display: flex;
+    flex-direction: column; }
+  .header__logo {
+    width: 200px;
+    margin: 0; }
+    .header__logo img {
+      width: 100%; }
+  .header__title {
+    font-family: 'Gotham-Bold';
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0; }
+    .header__title h1 {
+      font-size: 1.5rem;
+      margin: 0; }
+    .header__title h2 {
+      font-size: 4.6rem; }
+  .header__info {
+    display: flex; }
+    .header__info .left {
+      font-family: 'Gotham-Light';
+      text-align: center;
+      width: 70px;
+      height: 100px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      padding: .3rem; }
+      .header__info .left h1 {
+        font-size: 3rem; }
+      .header__info .left h2 {
+        font-size: 1.4rem;
+        margin-top: -.4rem; }
+      .header__info .left h3 {
+        font-size: 1.7rem; }
+    .header__info .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-left: 1rem; }
+      .header__info .right .hour {
+        font-family: 'Gotham-Bold';
+        font-size: 1rem;
+        color: #0a2f82;
+        background: #ffffff;
+        margin: 0;
+        padding: .5rem .5rem .3rem .5rem; }
+      .header__info .right h1 {
+        font-family: 'Gotham-Bold';
+        font-size: 1.5rem;
+        margin: 0; }
+      .header__info .right .address {
+        font-family: 'Gotham-Light';
+        font-size: 1rem;
+        margin: 0; }
+
+.about {
+  background-image: url("./../img/bg-about.png");
+  background-size: cover; }
+  .about__header h1 {
+    font-family: 'Gotham-Bold';
+    font-size: 3rem; }
+  .about__description {
+    display: flex; }
+    .about__description p {
+      font-family: 'Gotham-Light';
+      font-size: 1rem;
+      text-indent: .5rem;
+      line-height: 1.5rem;
+      color: #2d2d2d;
+      margin: 2rem 0 4rem 0; }
+    .about__description .right {
+      display: flex;
+      align-items: center;
+      padding-left: 150px; }
+  .about__profile {
+    display: flex;
+    align-items: center; }
+    .about__profile figure {
+      width: 50px;
+      height: 50px;
+      margin: 0;
+      border-radius: 100%;
+      overflow: hidden; }
+      .about__profile figure img {
+        width: 100%; }
+    .about__profile .info {
+      flex: 1;
+      padding-left: 1rem; }
+      .about__profile .info h1 {
+        font-family: 'Gotham-Bold';
+        font-size: 1.1rem; }
+      .about__profile .info h2 {
+        font-family: 'Gotham-Light';
+        font-size: .9rem; }
+  .about__date {
+    font-family: 'Gotham-Light';
+    text-align: center;
+    color: #0a2f82;
+    background: #ffffff;
+    border: 2px solid #0a2f82;
+    padding: 1rem 2rem; }
+    .about__date h1 {
+      font-size: 9rem; }
+    .about__date h2 {
+      font-size: 4.2rem;
+      margin: -2rem 0 -1.2rem 0; }
+    .about__date h3 {
+      font-size: 5.1rem; }
+
+.programming {
+  background: #eeefef; }
+  .programming__header h1 {
+    font-family: 'Gotham-Bold';
+    font-size: 3rem; }
+  .programming__content {
+    display: flex;
+    margin-top: 2rem; }
+    .programming__content .left {
+      flex: 1;
+      margin: 0 1.5rem 0 0; }
+    .programming__content .right {
+      flex: 1;
+      margin: 0 0 0 1.5rem; }
+      .programming__content .right p {
+        display: flex;
+        align-items: flex-end; }
+    .programming__content ul {
+      padding: 0; }
+    .programming__content li {
+      list-style: none;
+      position: relative;
+      margin: 1.5rem 0; }
+    .programming__content h1 {
+      font-family: 'Gotham-Light';
+      font-size: 1rem;
+      text-indent: 1rem;
+      color: #2d2d2d; }
+      .programming__content h1 strong {
+        font-family: 'Gotham-Bold'; }
+      .programming__content h1:before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        background: #000;
+        position: absolute;
+        left: 3px;
+        top: 4px;
+        border-radius: 100%; }
+    .programming__content h2 {
+      font-family: 'Gotham-Light';
+      font-size: .9rem;
+      color: #0a2f82;
+      padding-top: .3rem; }
+      .programming__content h2.gray {
+        color: #2d2d2d; }
+
+.registrations {
+  background: #0a2f82; }
+  .registrations__header h1 {
+    font-family: 'Gotham-Bold';
+    font-size: 3rem;
+    color: #ffffff; }
+  .registrations__header h2 {
+    font-family: 'Gotham-Light';
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 3rem 0; }
+  .registrations__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .registrations__form .input-group {
+      display: flex;
+      flex-direction: column;
+      width: calc(50% - 2rem);
+      margin-bottom: 2.5rem; }
+      .registrations__form .input-group label {
+        font-family: 'Gotham-Light';
+        font-size: 1rem;
+        color: #ffffff;
+        margin-bottom: 1rem; }
+      .registrations__form .input-group input {
+        font-family: 'Gotham-Light';
+        font-size: 1rem;
+        text-indent: .5rem;
+        height: 40px;
+        color: rgba(255, 255, 255, 0.3);
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        transition: all ease .2s; }
+        .registrations__form .input-group input:focus {
+          color: #ffffff;
+          border-color: #ffffff;
+          outline: none; }
+    .registrations__form .btn-send {
+      width: 100%; }
+      .registrations__form .btn-send button {
+        font-family: 'Gotham-Bold';
+        font-size: 1rem;
+        color: #000;
+        background: #ffffff;
+        padding: 1rem 3rem;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        transition: all ease .2s; }
+        .registrations__form .btn-send button:hover {
+          background: rgba(255, 255, 255, 0.9); }
+        .registrations__form .btn-send button:active {
+          background: #ffffff; }
+        .registrations__form .btn-send button:focus {
+          outline: none; }
+
+.map {
+  height: 400px;
+  background-image: url("./../img/map-example.png");
+  background-position: center; }
+
+.footer__content {
+  display: flex;
+  justify-content: space-between; }
+
+.footer__partners {
+  display: flex; }
+  .footer__partners .partner {
+    margin-right: 2.5rem; }
+    .footer__partners .partner h1 {
+      font-family: 'Gotham-Bold';
+      font-size: 1rem;
+      color: #2d2d2d;
+      margin-bottom: 1rem; }
+    .footer__partners .partner figure {
+      margin: 0; }
+
+.footer__nav {
+  display: flex;
+  align-items: center; }
+  .footer__nav a {
+    font-family: 'Gotham-Bold';
+    font-size: 1rem;
+    text-decoration: none;
+    color: #000;
+    margin-left: 2.5rem; }
+    .footer__nav a:hover {
+      color: #2d2d2d; }
+
+@media (max-width: 576px) {
+  .header {
+    background-position: 70% top; }
+    .header .container {
+      height: 100%;
+      justify-content: center;
+      background-color: rgba(10, 47, 130, 0.75); }
+    .header__logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%; }
+      .header__logo img {
+        width: 200px; }
+    .header__title h1 {
+      font-size: 1.1rem;
+      text-align: center; }
+    .header__title h2 {
+      font-size: 2.8rem;
+      text-align: center; }
+    .header__info {
+      justify-content: center;
+      padding: 0 .5rem; }
+      .header__info .right .hour,
+      .header__info .right .address {
+        font-size: .9rem; }
+      .header__info .right h1 {
+        font-size: 1.3rem; }
+  .about {
+    background-position: top right; }
+    .about .container {
+      background: rgba(255, 255, 255, 0.5); }
+    .about__header h1 {
+      font-size: 2rem;
+      text-align: center; }
+    .about__description {
+      padding: 0 1rem; }
+      .about__description p {
+        margin: 1rem 0 2rem 0; }
+      .about__description .right {
+        display: none; }
+  .programming {
+    padding: 0 1rem; }
+    .programming__header h1 {
+      font-size: 2rem;
+      text-align: center; }
+    .programming__content {
+      flex-direction: column; }
+      .programming__content .left {
+        margin: 0; }
+      .programming__content .right {
+        margin: -1.5rem 0 0 0; }
+  .registrations {
+    padding: 0 1rem; }
+    .registrations__header h1 {
+      font-size: 2rem;
+      text-align: center; }
+    .registrations__form .input-group {
+      width: 100%; }
+    .registrations__form .btn-send button {
+      width: 100%; }
+  .footer__content {
+    flex-wrap: wrap;
+    padding: 0 1rem; }
+  .footer__partners {
+    justify-content: space-between;
+    width: 100%; }
+    .footer__partners .partner {
+      margin-right: 0; }
+      .footer__partners .partner figure {
+        margin-right: 0; }
+        .footer__partners .partner figure img {
+          max-width: 100%; }
+  .footer__nav {
+    flex-direction: column;
+    width: 100%; }
+    .footer__nav a {
+      margin-left: 0;
+      margin-top: 1rem; } }

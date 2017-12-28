@@ -1,0 +1,596 @@
+/* Fonts */
+@font-face {
+  font-family: Gotham-Light;
+  font-weight: 100;
+  src: url(./../fonts/gotham-book.ttf);
+}
+
+@font-face {
+  font-family: Gotham-Medium;
+  font-weight: 400;
+  src: url(./../fonts/gotham-medium.ttf);
+}
+
+@font-face {
+  font-family: Gotham-Bold;
+  font-weight: 700;
+  src: url(./../fonts/gotham-bold.ttf);
+}
+
+/* Colors */
+$white: #ffffff;
+$blue: #0a2f82;
+$gray: #2d2d2d;
+
+/* Global CSS */
+body {
+  margin: 0 auto;
+}
+
+.container {
+  width: 1040px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+@media (max-width: 960px) {
+  .container {
+    width: 700px;
+  }
+} // tablet only
+
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+    padding: 50px 0;
+  }
+} // mobily only
+
+/* Sections */
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: $white;
+  background-image: url('./../img/bg-header.png');
+  background-position: top center;
+  background-size: cover;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  } // end .container
+
+  &__logo {
+    width: 200px;
+    margin: 0;
+
+    img {
+      width: 100%;
+    }
+  } // end __logo
+
+  &__title {
+    font-family: 'Gotham-Bold';
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+
+    h1 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 4.6rem;
+    }
+  } // end __title
+
+  &__info {
+    display: flex;
+
+    .left {
+      font-family: 'Gotham-Light';
+      text-align: center;
+      width: 70px;
+      height: 100px;
+      border: 2px solid rgba(255, 255, 255, .3);
+      padding: .3rem;
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+        margin-top: -.4rem;
+      }
+
+      h3 {
+        font-size: 1.7rem;
+      }
+    } // end .left
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-left: 1rem;
+
+      .hour {
+        font-family: 'Gotham-Bold';
+        font-size: 1rem;
+        color: $blue;
+        background: $white;
+        margin: 0;
+        padding: .5rem .5rem .3rem .5rem;
+      }
+
+      h1 {
+        font-family: 'Gotham-Bold';
+        font-size: 1.5rem;
+        margin: 0;
+      }
+
+      .address {
+        font-family: 'Gotham-Light';
+        font-size: 1rem;
+        margin: 0;
+      }
+    } // end .right
+  } // __info
+} // end .header
+
+.about {
+  background-image: url('./../img/bg-about.png');
+  background-size: cover;
+
+  &__header {
+    h1 {
+      font-family: 'Gotham-Bold';
+      font-size: 3rem;
+    }
+  }
+
+  &__description {
+    display: flex;
+
+    p {
+      font-family: 'Gotham-Light';
+      font-size: 1rem;
+      text-indent: .5rem;
+      line-height: 1.5rem;
+      color: $gray;
+      margin: 2rem 0 4rem 0;
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      padding-left: 150px;
+    } // end .left
+  } // end __description
+
+  &__profile {
+    display: flex;
+    align-items: center;
+
+    figure {
+      width: 50px;
+      height: 50px;
+      margin: 0;
+      border-radius: 100%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .info {
+      flex: 1;
+      padding-left: 1rem;
+
+      h1 {
+        font-family: 'Gotham-Bold';
+        font-size: 1.1rem;
+      }
+
+      h2 {
+        font-family: 'Gotham-Light';
+        font-size: .9rem;
+      }
+    }
+  }
+
+  &__date {
+    font-family: 'Gotham-Light';
+    text-align: center;
+    color: $blue;
+    background: $white;
+    border: 2px solid $blue;
+    padding: 1rem 2rem;
+
+    h1 {
+      font-size: 9rem;
+    }
+
+    h2 {
+      font-size: 4.2rem;
+      margin: -2rem 0 -1.2rem 0;
+    }
+
+    h3 {
+      font-size: 5.1rem;
+    }
+  } // end .date
+} // end .about
+
+.programming {
+  background: #eeefef;
+
+  &__header {
+    h1 {
+      font-family: 'Gotham-Bold';
+      font-size: 3rem;
+    }
+  } // end __header
+
+  &__content {
+    display: flex;
+    margin-top: 2rem;
+
+    .left {
+      flex: 1;
+      margin: 0 1.5rem 0 0;
+    }
+
+    .right {
+      flex: 1;
+      margin: 0 0 0 1.5rem;
+
+      p {
+        display: flex;
+        align-items: flex-end;
+      }
+    }
+
+    ul {
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      position: relative;
+      margin: 1.5rem 0;
+    }
+
+    h1 {
+      font-family: 'Gotham-Light';
+      font-size: 1rem;
+      text-indent: 1rem;
+      color: $gray;
+
+      strong {
+        font-family: 'Gotham-Bold';
+      }
+
+      &:before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        background: #000;
+        position: absolute;
+        left: 3px;
+        top: 4px;
+        border-radius: 100%;
+      }
+    }
+
+    h2 {
+      font-family: 'Gotham-Light';
+      font-size: .9rem;
+      color: $blue;
+      padding-top: .3rem;
+
+      &.gray {
+        color: $gray;
+      }
+    }
+  } // end __content
+} // end .programming
+
+.registrations {
+  background: $blue;
+
+  &__header {
+    h1 {
+      font-family: 'Gotham-Bold';
+      font-size: 3rem;
+      color: $white;
+    }
+
+    h2 {
+      font-family: 'Gotham-Light';
+      font-size: 1rem;
+      color: $white;
+      margin: 3rem 0;
+    }
+  } // end __header
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      width: calc(50% - 2rem);
+      margin-bottom: 2.5rem;
+
+      label {
+        font-family: 'Gotham-Light';
+        font-size: 1rem;
+        color: $white;
+        margin-bottom: 1rem;
+      }
+
+      input {
+        font-family: 'Gotham-Light';
+        font-size: 1rem;
+        text-indent: .5rem;
+        height: 40px;
+        color: rgba(255, 255, 255, .3);
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, .5);
+        transition: all ease .2s;
+
+        &:focus {
+          color: $white;
+          border-color: $white;
+          outline: none;
+        }
+      }
+    } // end .input-group
+
+    .btn-send {
+      width: 100%;
+
+      button {
+        font-family: 'Gotham-Bold';
+        font-size: 1rem;
+        color: #000;
+        background: $white;
+        padding: 1rem 3rem;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        transition: all ease .2s;
+
+        &:hover {
+          background: rgba($white, .9);
+        }
+
+        &:active {
+          background: $white;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    } // end .btn-send
+  } // end __form
+} // end .registrations
+
+.map {
+  height: 400px;
+  background-image: url('./../img/map-example.png');
+  background-position: center;
+} // end .map
+
+.footer {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  } // end __content
+
+  &__partners {
+    display: flex;
+
+    .partner {
+      margin-right: 2.5rem;
+
+      h1 {
+        font-family: 'Gotham-Bold';
+        font-size: 1rem;
+        color: $gray;
+        margin-bottom: 1rem;
+      }
+
+      figure {
+        margin: 0;
+      }
+    } // end .partner
+  } // end __partners
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    a {
+      font-family: 'Gotham-Bold';
+      font-size: 1rem;
+      text-decoration: none;
+      color: #000;
+      margin-left: 2.5rem;
+
+      &:hover {
+        color: $gray;
+      }
+    }
+  } // end __nav
+} // end .footer
+
+@media (max-width: 960px) {
+} // tablet only
+  
+@media (max-width: 576px) {
+.header {
+  background-position: 70% top;
+
+  .container {
+    height: 100%;
+    justify-content: center;
+    background-color: rgba($blue, .75);
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    img {
+      width: 200px;
+    }
+  } // end __logo
+
+  &__title {
+    h1 {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.8rem;
+      text-align: center;
+    }
+  } // end __title
+
+  &__info {
+    justify-content: center;
+    padding: 0 .5rem;
+
+    .right {
+      .hour,
+      .address {
+        font-size: .9rem;
+      }
+
+      h1 {
+        font-size: 1.3rem;
+      }
+    }
+  }
+} // end .header
+
+.about {
+  background-position: top right;
+  
+  .container {
+    background: rgba(255, 255, 255, .5);
+  }
+
+  &__header {
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+  } // end __header
+
+  &__description {
+    padding: 0 1rem;
+
+    p {
+      margin: 1rem 0 2rem 0;
+    }
+
+    .right {
+      display: none;
+    }
+  } // end __description
+} // end .about
+
+.programming {
+  padding: 0 1rem;
+
+  &__header {
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+  } // end __header
+
+  &__content {
+    flex-direction: column;
+
+    .left {
+      margin: 0;
+    }
+
+    .right {
+      margin: -1.5rem 0 0 0;
+    }
+  } // end __content
+} // end .programming
+
+.registrations {
+  padding: 0 1rem;
+
+  &__header {
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+  } // end __header
+
+  &__form {
+    .input-group {
+      width: 100%;
+    }
+
+    .btn-send {
+      button {
+        width: 100%;
+      }
+    }
+  } // end __form
+} // end .registrations
+
+.footer {
+  &__content {
+    flex-wrap: wrap;
+    padding: 0 1rem;
+  } // end __content
+
+  &__partners {
+    justify-content: space-between;
+    width: 100%;
+
+    .partner {
+      margin-right: 0;
+
+      figure {
+        margin-right: 0;
+
+        img {
+          max-width: 100%;
+        }
+      }
+    } // end .partner
+  } // end __partners
+
+  &__nav {
+    flex-direction: column;
+    width: 100%;
+
+    a {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
+  }
+} // end .footer
+} // mobily only
