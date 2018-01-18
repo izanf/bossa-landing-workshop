@@ -204,11 +204,11 @@
             <input id="crm" type="text" />
           </div>
           <div class="input-group">
-            <label for="from">Instituição onde Trabalha ou Estuda:</label>
-            <input id="from" type="text" />
+            <label for="institution">Instituição onde Trabalha ou Estuda:</label>
+            <input id="institution" type="text" />
           </div>
           <div class="btn-send">
-            <button>ENVIAR</button>
+            <button id="send">ENVIAR</button>
           </div>
         </form>
       </div>
@@ -242,7 +242,12 @@
         </div>
       </div>
     </section>
+
+    <p class="msg"></p>
   </main>
+
+  <script src="./node_modules/axios/dist/axios.min.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

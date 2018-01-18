@@ -10,6 +10,7 @@
   "author": "Izanderson Florencio",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.17.1",
     "node-sass": "^4.7.2"
   }
 }
