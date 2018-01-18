@@ -132,14 +132,14 @@ body {
         font-size: 1.5rem;
         margin: 0;
       }
-
-      .address {
-        font-family: 'Gotham-Light';
-        font-size: 1rem;
-        margin: 0;
-      }
     } // end .right
   } // __info
+
+  &__address {
+    font-family: 'Gotham-Light';
+    font-size: 1rem;
+    margin: 0;
+  } // end __address
 } // end .header
 
 .about {
@@ -385,11 +385,46 @@ body {
   } // end __form
 } // end .registrations
 
-.map {
-  height: 400px;
-  background-image: url('./../img/map-example.png');
-  background-position: center;
-} // end .map
+.address {
+  font-family: 'Gotham-Medium';
+  display: flex;
+  justify-content: flex-end;
+
+  &__content {
+    width: 520px;
+    padding: 100px 0;
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    address {
+      font-style: normal;
+
+      p {
+        font-family: 'Gotham-Light';
+        margin: 0 0 .2rem 0;
+
+        strong {
+          font-family: 'Gotham-Medium';
+        }
+      }
+    }
+  } // end __content
+
+  &__header {
+    h1 {
+      font-family: 'Gotham-Bold';
+      font-size: 3rem;
+    }
+  } // end __header
+
+  &__map {
+    width: 50%;
+    background-image: url('./../img/map-example.png');
+    background-position: center;
+  } // end __map
+}
 
 .footer {
   &__content {
@@ -435,6 +470,11 @@ body {
 } // end .footer
 
 @media (max-width: 960px) {
+.address {
+  &__content {
+    width: 350px;
+  }
+}
 } // tablet only
   
 @media (max-width: 576px) {
@@ -559,6 +599,23 @@ body {
     }
   } // end __form
 } // end .registrations
+
+.address {
+  flex-wrap: wrap;
+
+  &__content {
+    order: 2;
+    width: 100%;
+    padding: 50px 1rem;
+    border-bottom: 1px solid #DDD;
+  }
+
+  &__map {
+    order: 1;
+    width: 100%;
+    height: 200px;
+  }
+}
 
 .footer {
   &__content {
