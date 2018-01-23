@@ -237,6 +237,10 @@ body {
           color: #ffffff;
           border-color: #ffffff;
           outline: none; }
+        .registrations__form .input-group input.success {
+          border-color: #28a745; }
+        .registrations__form .input-group input.error {
+          border-color: #dc3545; }
     .registrations__form .btn-send {
       width: 100%; }
       .registrations__form .btn-send button {
@@ -249,7 +253,7 @@ body {
         border-radius: 2px;
         cursor: pointer;
         transition: all ease .2s; }
-        .registrations__form .btn-send button:hover {
+        .registrations__form .btn-send button:hover, .registrations__form .btn-send button:disabled {
           background: rgba(255, 255, 255, 0.9); }
         .registrations__form .btn-send button:active {
           background: #ffffff; }
@@ -307,6 +311,26 @@ body {
     margin-left: 2.5rem; }
     .footer__nav a:hover {
       color: #2d2d2d; }
+
+.msg {
+  font-family: 'Gotham-Light';
+  display: none;
+  position: fixed;
+  left: 2rem;
+  bottom: 1rem;
+  padding: .5rem 1rem;
+  margin: 0;
+  border-radius: 3px; }
+  .msg.success {
+    display: flex;
+    flex-direction: column;
+    color: #155724;
+    background: #c3e6cb; }
+  .msg.error {
+    display: flex;
+    flex-direction: column;
+    color: #721c24;
+    background: #f5c6cb; }
 
 @media (max-width: 960px) {
   .address__content {
